@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fredoka", "Zen Maru Gothic", "Noto Sans TC", ui-rounded, system-ui, sans-serif;
+  --font-hand: "Patrick Hand", "Zen Maru Gothic", "Noto Sans TC", cursive, sans-serif;
+  --font-body: "Nunito", "Noto Sans TC", system-ui, sans-serif;
+
+  --color-cream: #FFFDF9;
+  --color-blush: #FFEBF0;
+  --color-coral: #FF8DA1;
+  --color-lime-accent: #A3E635;
+  --color-lime-soft: #B5E48C;
+  --color-sky-pastel: #BAE6FD;
+  --color-gold-warm: #FCD34D;
+  --color-ink: #4A3B47;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-body);
+    background-color: #FFFDF9;
+    color: #4A3B47;
+    overflow-x: hidden;
+  }
+
+  @media (min-width: 1280px) {
+    html {
+      font-size: 18px;
+    }
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+/* Custom utility classes */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-hand {
+  font-family: var(--font-hand);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Cute airmail stripe border */
+.airmail-border {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #FF8DA1 0px,
+    #FF8DA1 12px,
+    #FFFDF9 12px,
+    #FFFDF9 22px,
+    #7DD3FC 22px,
+    #7DD3FC 34px,
+    #FFFDF9 34px,
+    #FFFDF9 44px
+  );
+}
+
+/* Lined stationery paper */
+.lined-paper {
+  background-color: #FFFDF9;
+  background-image: linear-gradient(transparent 31px, rgba(255, 141, 161, 0.22) 32px);
+  background-size: 100% 32px;
+  line-height: 32px;
+}
+
+/* Soft polka dot background */
+.pastel-dots {
+  background-color: #FFFDF9;
+  background-image: radial-gradient(rgba(255, 141, 161, 0.16) 1.5px, transparent 1.5px),
+    radial-gradient(rgba(186, 230, 253, 0.28) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 6s linear infinite;
+}
