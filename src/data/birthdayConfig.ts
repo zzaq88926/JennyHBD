@@ -127,7 +127,7 @@ export const birthdayConfig: BirthdayConfig = {
   boardingPass: {
     acceptedNames: ["jenny", "以淇", "大寶寶", "love", "babe", "baby", "1224"],
     passengerDisplayName: "Jenny 以淇（24 歲耶誕夜大寶寶 🎄）",
-    typewriterPrompt: "這班耶誕夜特別航班，只專屬於我最愛的⋯⋯",
+    typewriterPrompt: "這班耶誕特別航班，專屬於⋯⋯（請輸入妳的名字）",
     hintText:
       "小提示：試試看妳的英文名字 Jenny、中文名字（以淇），或我最常叫妳的「大寶寶」💗",
     fromCode: "TPE",
